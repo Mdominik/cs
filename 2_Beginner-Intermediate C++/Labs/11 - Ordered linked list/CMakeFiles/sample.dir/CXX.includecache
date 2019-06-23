@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/main.cpp
+main.h
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/main.h
+

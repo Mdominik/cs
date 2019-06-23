@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/src/main.cpp
+people.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/src/people.hpp
+main.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/src/main.hpp
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/src/main.hpp
+iostream
+-
+string
+-
+vector
+-
+fstream
+-
+sstream
+-
+algorithm
+-
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/11 - Ordered linked list/src/people.hpp
+iostream
+-
+string
+-
+fstream
+-
+sstream
+-
+
