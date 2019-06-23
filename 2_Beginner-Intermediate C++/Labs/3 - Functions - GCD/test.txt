@@ -1,0 +1,4 @@
+The GCD for 27 and 54 is 27
+The GCD for 21 and 21 is 21
+The GCD for 0 and 4 is 4
+The GCD for 77 and 28 is 7
