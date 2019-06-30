@@ -1,15 +1,15 @@
 #include "accounts.hpp"
 
 
+
 Account::Account(std::string name, int balance) : m_name{name}, m_balance{balance} {
     m_openingDate = new Date;
     m_accountNumber = createNumber();
     number_of_accounts++;
     m_lastUpdateDate = m_openingDate;
-    std::cout << "automatic date"<< std::endl;
     std::cout << "You are our " << number_of_accounts << ". client." << std::endl;
-    this->display();
-    std::cout << "ACCOUNT CONSTRUCT" << std::endl;
+    //updateBalance();
+    delete m_openingDate;
 }
 
 Account::Account(std::string name, int balance, Date* opening) : m_name{name},
@@ -17,10 +17,8 @@ m_balance{balance}, m_openingDate{opening} {
     m_accountNumber = createNumber();
     number_of_accounts++;
     m_lastUpdateDate = opening;
-    std::cout << "manual date"<< std::endl;
-    std::cout << "You are our " << Account::number_of_accounts << ". client." << std::endl;
-    this->display();
-    std::cout << "ACCOUNT CONSTRUCT" << std::endl;
+    std::cout << "You are our " << number_of_accounts << ". client." << std::endl;
+    //updateBalance();
 }
 Account::Account(){}
 Account::~Account(){}
@@ -81,19 +79,21 @@ bool Account::withdraw(int cents) {
 }
 
 
-int Account::calculateInterests(float percent, int times) {
-    return this->m_balance * std::pow(1+percent/100, times);
+int Account::calculateInterests(int percent, int times) {
+    int x = this->getBalance() * std::pow(1+float(percent)/100, times);
+    return x;
 }
 
 
 // Updatesddddd
 void Account::updateBalance() {
     Date* now = new Date();
-    int diff_months = now->getYear()-Account::m_lastUpdateDate->getYear();
-    diff_months = diff_months*12 + (now->getMonth()-Account::m_lastUpdateDate->getMonth());
-    int interests = Account::calculateInterests(Account::interestRate, diff_months);
+    int diff_months = now->getYear()-this->getLastUpdate()->getYear();
+    diff_months = diff_months*12 + (now->getMonth()-this->getLastUpdate()->getMonth());
+    int interests = this->calculateInterests(this->getInterestRate(), diff_months);
+    std::cout << diff_months << std::endl;
     this->setBalance(interests);
-    Account::m_lastUpdateDate = now;
+    this->setLastUpdate(now);
     delete now;
     return;
 }
