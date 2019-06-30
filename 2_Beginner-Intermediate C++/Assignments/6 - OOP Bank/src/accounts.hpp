@@ -43,8 +43,8 @@ public:
     virtual float getInterestRate() const {return interestRate;}
     virtual void setInterestRate(int _interestRate) {interestRate = _interestRate;}
     int interestRate;
-
-
+    virtual void setNext(Account* _next) {next = _next;}
+    virtual Account* getNext() const {return next;}
 
 protected:
     std::string m_name;
@@ -56,7 +56,7 @@ protected:
     static int next_account_number;
 
 private:
-    Account* next;
+    Account* next = nullptr;
 };
 
 
@@ -65,17 +65,13 @@ private:
 class Checking : public Account {
 public:
     Checking(std::string name, int balance) : Account(name, balance) {
-        this->setInterestRate(50);
-        this->updateBalance();
+
     }
     Checking(std::string name, int balance, Date opening) : Account(name, balance, opening) {
-        this->setInterestRate(50);
-        this->updateBalance();
+
     }
     virtual ~Checking();
     virtual bool withdraw(int cents);
-    float getInterestRate() const {return interestRate;}
-    void setInterestRate(int _interestRate) {interestRate = _interestRate;}
     virtual Date getLastUpdate() const {return m_lastUpdateDate;}
     virtual void setLastUpdate(Date last) {m_lastUpdateDate = last;}
 };
@@ -84,17 +80,15 @@ class Savings : public Account {
 public:
     Savings(std::string name, int balance) : Account(name, balance) {
         Savings::setInterestRate(10);
-        this->updateBalance();
     }
     Savings(std::string name, int balance, Date opening) : Account(name, balance, opening) {
         Savings::setInterestRate(10);
-        this->updateBalance();
     }
     virtual ~Savings();
     float getInterestRate() const {return interestRate;}
     void setInterestRate(int _interestRate) {interestRate = _interestRate;}
-    virtual Date getLastUpdate() const {return m_lastUpdateDate;}
-    virtual void setLastUpdate(Date last) {m_lastUpdateDate = last;}
+    // virtual Date getLastUpdate() const {return m_lastUpdateDate;}
+    // virtual void setLastUpdate(Date last) {m_lastUpdateDate = last;}
 
     //virtual void updateBalance();
 
@@ -103,15 +97,16 @@ public:
 class MoneyMarket : public Savings {
 public:
     MoneyMarket(std::string name, int balance) : Savings(name, balance) {
-        this->setInterestRate(100);
-        this->updateBalance();
+        this->setInterestRate(20);
+
     }
     MoneyMarket(std::string name, int balance, Date opening) : Savings(name, balance, opening) {
-        this->setInterestRate(100);
-        this->updateBalance();
+        this->setInterestRate(20);
     }
     virtual ~MoneyMarket();
     virtual bool withdraw(int cents);
-    virtual Date getLastUpdate() const {return m_lastUpdateDate;}
-    virtual void setLastUpdate(Date last) {m_lastUpdateDate = last;}
+    // virtual Date getLastUpdate() const {return m_lastUpdateDate;}
+    // virtual void setLastUpdate(Date last) {m_lastUpdateDate = last;}
+    float getInterestRate() const {return interestRate;}
+    void setInterestRate(int _interestRate) {interestRate = _interestRate;}
 };

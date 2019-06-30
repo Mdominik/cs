@@ -82,7 +82,6 @@ void Account::updateBalance() {
     int diff_months = p.getYear()-this->getLastUpdate().getYear();
     diff_months = diff_months*12 + (p.getMonth()-this->getLastUpdate().getMonth());
     int interests = this->calculateInterests(this->getInterestRate(), diff_months);
-    std::cout << diff_months << std::endl;
     this->setBalance(interests);
     this->setLastUpdate(p);
     return;

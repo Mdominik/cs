@@ -11,16 +11,24 @@
 
 class Bank{
 public:
-    Account* head;
+    Account* head = nullptr;
     Account* findAccount(std::string number);
-    Account* popAccount();
+    Account* removeAccount();
     void pushAccount(Account* acc);
-
+    static int size;
 private:
 
 };
 
 class FileManager {
+public:
+    FileManager(char* path) : m_path(path)  {}
+    void populateFile(Bank* bank);
+    std::string m_path;
+
+};
+
+class MenuManager {
 public:
 
 };
