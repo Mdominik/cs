@@ -7,11 +7,18 @@
 
 int main() {
     std::vector<Account*> accs;
-    accs.push_back(new Savings("Tom Jonson", 3000, new Date(2018, 12, 20, 6, 32, 40)));
-    accs.push_back(new Savings("Tom Jonson", 312000, new Date(2019, 4, 20, 6, 32, 40)));
-    std::cout << accs[0]->getBalance() << std::endl;
-    std::cout << accs[1]->getBalance() << std::endl;
-
-    return 0;
+    accs.push_back(new Savings("Tom Jonson", 3000, Date(2019, 5, 20, 10, 34, 12)));
+    accs.push_back(new Checking("Jaime Lannister", 10000, Date(2019, 4, 12, 10, 34, 12)));
+    accs.push_back(new Savings("Dominik Mazniak", 4000));
+    LOG(accs[0]->withdraw(2900));
+    LOG(accs[2]->withdraw(2990));
+    LOG(accs[1]->withdraw(40000));
+    accs[1]->deposit(100000);
+    accs[1]->transfer(accs[2], 2000);
+    accs[0]->display();
+    accs[1]->display();
+    accs[2]->display();
+    accs.clear();
+    exit(0);
 
 }

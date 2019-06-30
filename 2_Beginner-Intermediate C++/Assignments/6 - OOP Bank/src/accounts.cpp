@@ -1,24 +1,20 @@
 #include "accounts.hpp"
 
 
-
 Account::Account(std::string name, int balance) : m_name{name}, m_balance{balance} {
-    m_openingDate = new Date;
+    Date now;
     m_accountNumber = createNumber();
     number_of_accounts++;
-    m_lastUpdateDate = m_openingDate;
+    this->m_lastUpdateDate = now;
     std::cout << "You are our " << number_of_accounts << ". client." << std::endl;
-    //updateBalance();
-    delete m_openingDate;
 }
 
-Account::Account(std::string name, int balance, Date* opening) : m_name{name},
+Account::Account(std::string name, int balance, Date opening) : m_name{name},
 m_balance{balance}, m_openingDate{opening} {
     m_accountNumber = createNumber();
     number_of_accounts++;
-    m_lastUpdateDate = opening;
+    this->m_lastUpdateDate = m_openingDate;
     std::cout << "You are our " << number_of_accounts << ". client." << std::endl;
-    //updateBalance();
 }
 Account::Account(){}
 Account::~Account(){}
@@ -38,7 +34,6 @@ int Account::number_of_accounts=0;
 int Account::next_account_number=0;
 
 void Account::display() {
-    updateBalance();
     // std::cout << "Name: " << m_name << std::endl;
     std::cout << "Account number: " << m_accountNumber << std::endl;
     //std::cout << "Date of opening: " << m_openingDate->getDate_DDMMYYYY() << std::endl;
@@ -47,12 +42,8 @@ void Account::display() {
 }
 
 bool Account::deposit(int cents) {
-    updateBalance();
-    if(cents > m_balance) {
-        std::cout << "Not enough money!" << std::endl;
-        return false;
-    }
-    m_balance +=cents;
+    cents = getBalance()+cents;
+    setBalance(cents);
     return true;
 }
 
@@ -87,24 +78,23 @@ int Account::calculateInterests(int percent, int times) {
 
 // Updatesddddd
 void Account::updateBalance() {
-    Date* now = new Date();
-    int diff_months = now->getYear()-this->getLastUpdate()->getYear();
-    diff_months = diff_months*12 + (now->getMonth()-this->getLastUpdate()->getMonth());
+    Date p;
+    int diff_months = p.getYear()-this->getLastUpdate().getYear();
+    diff_months = diff_months*12 + (p.getMonth()-this->getLastUpdate().getMonth());
     int interests = this->calculateInterests(this->getInterestRate(), diff_months);
     std::cout << diff_months << std::endl;
     this->setBalance(interests);
-    this->setLastUpdate(now);
-    delete now;
+    this->setLastUpdate(p);
     return;
 }
 
 
 bool Checking::withdraw(int cents) {
-    if(cents > m_balance-MAX_DEBIT_CHECKING) {
+    if(cents > this->getBalance()+MAX_DEBIT_CHECKING-WITHDRAWAL_COST_CHECKING) {
         std::cout << "Not enough money!" << std::endl;
         return false;
     }
-    else if (cents > m_balance) {
+    else if (cents > this->getBalance()) {
         m_balance -= cents;
         m_balance -= WITHDRAWAL_COST_CHECKING;
     }
@@ -117,7 +107,7 @@ bool Checking::withdraw(int cents) {
 bool MoneyMarket::withdraw(int cents) {
 
     updateBalance();
-    if(cents > m_balance) {
+    if(cents > this->getBalance()) {
         std::cout << "Not enough money!" << std::endl;
         return false;
     }
