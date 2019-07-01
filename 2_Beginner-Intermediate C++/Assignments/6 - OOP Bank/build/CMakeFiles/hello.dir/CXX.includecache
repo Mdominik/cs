@@ -9,8 +9,6 @@
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.cpp
 accounts.hpp
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.hpp
-date.hpp
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
 
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.hpp
 iostream
@@ -29,8 +27,10 @@ ctime
 -
 cmath
 -
-
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/bank.hpp
+date.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
+memory
+-
 
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
 iostream
@@ -47,12 +47,6 @@ sstream
 -
 ctime
 -
-
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/main.cpp
-date.hpp
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
-bank.hpp
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/bank.hpp
-accounts.hpp
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.hpp
+vector
+-
 

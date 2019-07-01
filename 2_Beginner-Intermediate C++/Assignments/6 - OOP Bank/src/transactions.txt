@@ -1,0 +1,40 @@
+---WITHDRAW----
+Account: 5
+Name: REEEE REEEE
+Date: 31/6/2019 24:27:28
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 4
+Name: Janko Muzykant
+Date: 31/6/2019 24:27:28
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 3
+Name: Laszlo Cech
+Date: 31/6/2019 24:27:28
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 2
+Name: Pablo Escobar
+Date: 31/6/2019 24:27:28
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 5
+Name: REEEE REEEE
+Date: 31/6/2019 24:28:21
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 4
+Name: Janko Muzykant
+Date: 31/6/2019 24:28:21
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 3
+Name: Laszlo Cech
+Date: 31/6/2019 24:28:21
+Money withdrawn: 1000
+---WITHDRAW----
+Account: 2
+Name: Pablo Escobar
+Date: 31/6/2019 24:28:21
+Money withdrawn: 1000

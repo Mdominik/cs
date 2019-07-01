@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.cpp" "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/bank.dir/src/accounts.cpp.o"
+  "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/bank.cpp" "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/bank.dir/src/bank.cpp.o"
   "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/main.cpp" "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/bank.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

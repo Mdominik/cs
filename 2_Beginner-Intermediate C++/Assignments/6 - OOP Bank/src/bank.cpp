@@ -1,5 +1,8 @@
 #include "bank.hpp"
 int Bank::size = 0;
+
+#define LOG(X) std::cout << X << std::endl
+
 void Bank::pushAccount(Account* new_acc) {
     new_acc->updateBalance();
     if(!this->head) {
@@ -17,7 +20,7 @@ Account* Bank::removeAccount() {
 
 }
 
-void FileManager::populateFile(Bank* bank) {
+void FileManager::populateList(Bank* bank) {
     int counter = 0;
     std::ifstream myfile("../src/" + this->m_path);
     int id_buf;
@@ -58,7 +61,27 @@ void FileManager::populateFile(Bank* bank) {
             if(ss >> minute_buf);
             if(ss >> second_buf);
         }
-
         counter++;
+    }
+}
+
+void Bank::withdraw(Account* acc, int cents) {
+    std::ofstream myfile;
+    std::string file = "../src/transactions.txt";
+    myfile.open(file, std::ios::app);
+    bool success = acc->withdraw(cents);
+    if(success) {
+        Date date;
+        myfile << "---WITHDRAW----";
+        myfile << "\nAccount: " << acc->getAccount();
+        myfile << "\nName: " << acc->getName();
+        myfile << "\nDate: ";
+        myfile << date.getDate_DDMMYYYY();
+        myfile << "\nMoney withdrawn: " << cents;
+        myfile << "\n";
+        myfile.close();
+    }
+    else {
+        return;
     }
 }

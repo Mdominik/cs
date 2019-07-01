@@ -62,7 +62,6 @@ bool Account::transfer(Account* recipient, int cents){
 bool Account::withdraw(int cents) {
     updateBalance();
     if(cents > m_balance) {
-        std::cout << "Not enough money!" << std::endl;
         return false;
     }
     m_balance -= cents;

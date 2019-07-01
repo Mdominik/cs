@@ -8,13 +8,14 @@
 #include <ctime>
 #include <vector>
 #include "accounts.hpp"
-
+class FileManager;
 class Bank{
 public:
     Account* head = nullptr;
     Account* findAccount(std::string number);
     Account* removeAccount();
     void pushAccount(Account* acc);
+    void withdraw(Account* acc, int cents);
     static int size;
 private:
 
@@ -23,7 +24,7 @@ private:
 class FileManager {
 public:
     FileManager(char* path) : m_path(path)  {}
-    void populateFile(Bank* bank);
+    void populateList(Bank* bank);
     std::string m_path;
 
 };

@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = "/home/dominik/projects/study/2_Beginner-Intermediate C++/Ass
 CMAKE_BINARY_DIR = "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/build"
 
 #=============================================================================
-# Target rules for target CMakeFiles/bank.dir
+# Target rules for target CMakeFiles/hello.dir
 
 # All Build rule for target.
-CMakeFiles/bank.dir/all:
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/depend
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/build/CMakeFiles" --progress-num=1,2 "Built target bank"
-.PHONY : CMakeFiles/bank.dir/all
+CMakeFiles/hello.dir/all:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/build/CMakeFiles" --progress-num=1,2,3,4,5 "Built target hello"
+.PHONY : CMakeFiles/hello.dir/all
 
 # Include target in all.
-all: CMakeFiles/bank.dir/all
+all: CMakeFiles/hello.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/bank.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/build/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bank.dir/all
+CMakeFiles/hello.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/build/CMakeFiles" 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/build/CMakeFiles" 0
-.PHONY : CMakeFiles/bank.dir/rule
+.PHONY : CMakeFiles/hello.dir/rule
 
 # Convenience name for target.
-bank: CMakeFiles/bank.dir/rule
+hello: CMakeFiles/hello.dir/rule
 
-.PHONY : bank
-
-# clean rule for target.
-CMakeFiles/bank.dir/clean:
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/clean
-.PHONY : CMakeFiles/bank.dir/clean
+.PHONY : hello
 
 # clean rule for target.
-clean: CMakeFiles/bank.dir/clean
+CMakeFiles/hello.dir/clean:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/clean
+.PHONY : CMakeFiles/hello.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/hello.dir/clean
 
 .PHONY : clean
 

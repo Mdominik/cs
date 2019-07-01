@@ -7,12 +7,11 @@
 
 int main() {
     Bank* bank = new Bank();
-    FileManager fileman("accounts.txt");
-    fileman.populateFile(bank);
+    FileManager input_acc("accounts.txt");
+    input_acc.populateList(bank);
     Account* tmp = bank->head;
-
     while(tmp->getNext()) {
-        tmp->display();
+        bank->withdraw(tmp, 1000);
         tmp=tmp->getNext();
     }
     tmp->display();

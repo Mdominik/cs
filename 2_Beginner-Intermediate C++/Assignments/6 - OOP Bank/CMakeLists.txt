@@ -14,5 +14,10 @@ set(CMAKE_BUILD_TYPE Debug)
 include_directories("${PROJECT_SOURCE_DIR}")
 
 
-add_executable(bank ${PROJECT_SOURCE_DIR}/src/main.cpp
- ${PROJECT_SOURCE_DIR}/src/main.hpp)
+add_executable(hello ${PROJECT_SOURCE_DIR}/src/main.cpp
+ ${PROJECT_SOURCE_DIR}/src/date.hpp
+ ${PROJECT_SOURCE_DIR}/src/date.cpp
+ ${PROJECT_SOURCE_DIR}/src/bank.hpp
+ ${PROJECT_SOURCE_DIR}/src/bank.cpp
+ ${PROJECT_SOURCE_DIR}/src/accounts.cpp
+ ${PROJECT_SOURCE_DIR}/src/accounts.hpp)

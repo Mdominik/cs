@@ -111,17 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bank
+# Target rules for targets named hello
 
 # Build rule for target.
-bank: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bank
-.PHONY : bank
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
 
 # fast build rule for target.
-bank/fast:
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/build
-.PHONY : bank/fast
+hello/fast:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+src/accounts.o: src/accounts.cpp.o
+
+.PHONY : src/accounts.o
+
+# target to build an object file
+src/accounts.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/accounts.cpp.o
+.PHONY : src/accounts.cpp.o
+
+src/accounts.i: src/accounts.cpp.i
+
+.PHONY : src/accounts.i
+
+# target to preprocess a source file
+src/accounts.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/accounts.cpp.i
+.PHONY : src/accounts.cpp.i
+
+src/accounts.s: src/accounts.cpp.s
+
+.PHONY : src/accounts.s
+
+# target to generate assembly for a file
+src/accounts.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/accounts.cpp.s
+.PHONY : src/accounts.cpp.s
+
+src/bank.o: src/bank.cpp.o
+
+.PHONY : src/bank.o
+
+# target to build an object file
+src/bank.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/bank.cpp.o
+.PHONY : src/bank.cpp.o
+
+src/bank.i: src/bank.cpp.i
+
+.PHONY : src/bank.i
+
+# target to preprocess a source file
+src/bank.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/bank.cpp.i
+.PHONY : src/bank.cpp.i
+
+src/bank.s: src/bank.cpp.s
+
+.PHONY : src/bank.s
+
+# target to generate assembly for a file
+src/bank.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/bank.cpp.s
+.PHONY : src/bank.cpp.s
+
+src/date.o: src/date.cpp.o
+
+.PHONY : src/date.o
+
+# target to build an object file
+src/date.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/date.cpp.o
+.PHONY : src/date.cpp.o
+
+src/date.i: src/date.cpp.i
+
+.PHONY : src/date.i
+
+# target to preprocess a source file
+src/date.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/date.cpp.i
+.PHONY : src/date.cpp.i
+
+src/date.s: src/date.cpp.s
+
+.PHONY : src/date.s
+
+# target to generate assembly for a file
+src/date.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/date.cpp.s
+.PHONY : src/date.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +210,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +219,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +228,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/bank.dir/build.make CMakeFiles/bank.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -157,8 +238,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... bank"
+	@echo "... hello"
 	@echo "... edit_cache"
+	@echo "... src/accounts.o"
+	@echo "... src/accounts.i"
+	@echo "... src/accounts.s"
+	@echo "... src/bank.o"
+	@echo "... src/bank.i"
+	@echo "... src/bank.s"
+	@echo "... src/date.o"
+	@echo "... src/date.i"
+	@echo "... src/date.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.cpp
-accounts.hpp
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.hpp
-date.hpp
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
-
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.hpp
 iostream
 -
@@ -29,8 +23,34 @@ ctime
 -
 cmath
 -
+date.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
+memory
+-
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/bank.cpp
+bank.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/bank.hpp
 
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/bank.hpp
+iostream
+-
+string
+-
+algorithm
+-
+fstream
+-
+string
+-
+sstream
+-
+ctime
+-
+vector
+-
+accounts.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/accounts.hpp
 
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/date.hpp
 iostream
@@ -46,6 +66,8 @@ string
 sstream
 -
 ctime
+-
+vector
 -
 
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/src/main.cpp

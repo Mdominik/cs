@@ -1,3 +1,3 @@
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/rebuild_cache.dir
-/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/bank.dir
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/hello.dir
 /home/dominik/projects/study/2_Beginner-Intermediate C++/Assignments/6 - OOP Bank/CMakeFiles/edit_cache.dir
