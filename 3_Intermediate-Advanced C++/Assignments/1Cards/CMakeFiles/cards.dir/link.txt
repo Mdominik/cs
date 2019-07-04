@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/cards.dir/src/main.cpp.o CMakeFiles/cards.dir/src/Card.cpp.o  -o bin/cards 

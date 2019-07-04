@@ -1,0 +1,3 @@
+/home/dominik/projects/study/3_Intermediate-Advanced C++/Assignments/Cards/CMakeFiles/rebuild_cache.dir
+/home/dominik/projects/study/3_Intermediate-Advanced C++/Assignments/Cards/CMakeFiles/cards.dir
+/home/dominik/projects/study/3_Intermediate-Advanced C++/Assignments/Cards/CMakeFiles/edit_cache.dir

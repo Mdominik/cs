@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dominik/projects/study/3_Intermediate-Advanced C++/Assignments/Cards/src/Card.hpp
+iostream
+-
+vector
+-
+string
+-
+
+/home/dominik/projects/study/3_Intermediate-Advanced C++/Assignments/Cards/src/main.cpp
+Card.hpp
+/home/dominik/projects/study/3_Intermediate-Advanced C++/Assignments/Cards/src/Card.hpp
+random
+-
+ctime
+-
+
