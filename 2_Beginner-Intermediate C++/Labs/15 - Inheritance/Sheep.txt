@@ -1,0 +1,14 @@
+Tom
+5
+LONG
+brown
+
+Dan
+12
+FINE
+black
+
+Robert
+25
+CARPET
+white

@@ -1,0 +1,3 @@
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/build/CMakeFiles/rebuild_cache.dir
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/build/CMakeFiles/farm.dir
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/build/CMakeFiles/edit_cache.dir

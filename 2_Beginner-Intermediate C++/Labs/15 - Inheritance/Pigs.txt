@@ -1,0 +1,11 @@
+Greg
+2
+STRAIGHT
+
+Dominik
+3
+CURL_UP
+
+Arthur
+6
+CURL_LEFT

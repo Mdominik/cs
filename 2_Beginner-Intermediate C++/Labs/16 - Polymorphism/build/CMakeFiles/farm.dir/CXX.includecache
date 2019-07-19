@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/src/farm.hpp
+iostream
+-
+string
+-
+sstream
+-
+fstream
+-
+vector
+-
+algorithm
+-
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/src/main.cpp
+main.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/src/main.hpp
+
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/src/main.hpp
+iostream
+-
+string
+-
+sstream
+-
+fstream
+-
+vector
+-
+farm.hpp
+/home/dominik/projects/study/2_Beginner-Intermediate C++/Labs/16 - Polymorphism/src/farm.hpp
+

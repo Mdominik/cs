@@ -2,17 +2,21 @@
 #include <vector>
 #include <string>
 #include <assert.h>
+
+
 //enqueue(T obj)
 //T dequeue
 //T front
 //int size
 //bool isEmpty
 //bool isFull
+
+
 template<class T>
 struct node {
     T obj;
-    node* next=nullptr;
-    node* prev=nullptr;
+    node<T>* next=nullptr;
+    node<T>* prev=nullptr;
 };
 
 template<class T>
@@ -47,11 +51,11 @@ void queue<T>::enqueue(const T& obj) {
         return;
     }
     back->next = new node<T>();
+    back->prev = back;
     back = back->next;
     back->next->obj = obj;
+    std::cout << "no nie dziaa" << std::endl;
     m_size++;
-    assert(head);
-    assert(back);
     return;
 }
 
@@ -65,7 +69,6 @@ T queue<T>::dequeue() {
     }
     obj = head->obj;
     head = head->prev;
-
     return obj;
 }
 
@@ -75,12 +78,14 @@ T queue<T>::front() const{
 }
 
 int main() {
-    queue<int> lists;
+    queue<std::string> lists;
     int *x = nullptr;
-    lists.enqueue(2);
-    lists.enqueue(2);
-    lists.enqueue(2);
-
+    std::string a = "abc";
+    std::string b = "cde";
+    std::string c = "fgh";
+    lists.enqueue(a);
+    lists.enqueue(b);
+    lists.enqueue(c);
     std::cout << lists.size() << std::endl;
     std::cout << lists.dequeue() << std::endl;
     return 0;

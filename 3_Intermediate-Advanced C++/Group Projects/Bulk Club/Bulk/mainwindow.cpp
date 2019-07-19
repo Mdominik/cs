@@ -15,6 +15,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
 void MainWindow::on_pushButton_released()
 {
     QString searchString = ui->lineEdit->text();

@@ -1,0 +1,11 @@
+1) case sensitive header names
+2) constructor and destructor - always declaration+definition or not at all.
+Item() = default()
+3) no unused variables!!!
+4) always return if the method returns sth
+5) don't hardcode file names (especially absolute paths)
+6) class for sth with methods+variables, structs for only variables
+7) Smart pointer for pointer inside a class. 
+Item* should be const inside Sale so it cannot change it.
+8) NO C-style MACROS!!! Use const and constexpr instead
+9) Provide better comments for reviewers

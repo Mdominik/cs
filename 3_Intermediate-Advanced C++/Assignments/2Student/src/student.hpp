@@ -5,6 +5,8 @@
 #include <ctime>
 #include <algorithm>
 #include <sstream>
+
+
 class Date{
 public:
     Date();
@@ -70,28 +72,28 @@ public:
     float m_totalScore;
     Date graduation;
     void print();
-
-    bool operator==(const Student& st) {
-        return this->m_GPA == st.m_GPA;
+    friend std::ostream & operator << (std::ostream &out, const CS1Cstudent &c);
+    friend std::istream & operator >> (std::istream &in,  CS1Cstudent &c);
+    bool operator==(const CS1Cstudent& st) {
+        return this->m_age == st.m_age;
     }
-
-    void operator++() {
-        this->m_age = this->m_age+1;
-    }
-
-
 };
 
+inline std::ostream & operator << (std::ostream &out, const CS1Cstudent &c)
+{
+    out << c.m_age;
+    out << "+i" << c.m_GPA << std::endl;
+    return out;
+}
 
-// std::ostream& operator<<(std::ostream &os, const Student &st) {
-//     os << "Name: " << st.m_name;
-//     os << "ID: " << st.m_id;
-// }
-//
-// std::ostream& operator>>(std::ostream &os, const Student &st) {
-//     os >> "Name: " << st.m_name;
-//     os >> "ID: " << st.m_id;
-// }
+inline std::istream & operator >> (std::istream &in,  CS1Cstudent &c)
+{
+    std::cout << "Enter age ";
+    in >> c.m_age;
+    std::cout << "Enter gpa ";
+    in >> c.m_GPA;
+    return in;
+}
 
 class SoftwareTester : public Student {
 public:

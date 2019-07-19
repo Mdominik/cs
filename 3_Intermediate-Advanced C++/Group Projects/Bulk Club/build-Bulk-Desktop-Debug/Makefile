@@ -51,10 +51,14 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Bulk/main.cpp \
-		../Bulk/mainwindow.cpp qrc_finder.cpp \
+		../Bulk/member.cpp \
+		../Bulk/mainwindow.cpp \
+		../Bulk/member.cpp qrc_finder.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = main.o \
+		member.o \
 		mainwindow.o \
+		member.o \
 		qrc_finder.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -131,8 +135,12 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../Bulk/Bulk.pro ../Bulk/mainwindow.h ../Bulk/main.cpp \
-		../Bulk/mainwindow.cpp
+		../Bulk/Bulk.pro ../Bulk/member.h \
+		../Bulk/mainwindow.h \
+		../Bulk/member.h ../Bulk/main.cpp \
+		../Bulk/member.cpp \
+		../Bulk/mainwindow.cpp \
+		../Bulk/member.cpp
 QMAKE_TARGET  = Bulk
 DESTDIR       = 
 TARGET        = Bulk
@@ -319,8 +327,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Bulk/finder.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Bulk/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Bulk/main.cpp ../Bulk/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Bulk/member.h ../Bulk/mainwindow.h ../Bulk/member.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Bulk/main.cpp ../Bulk/member.cpp ../Bulk/mainwindow.cpp ../Bulk/member.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Bulk/mainwindow.ui $(DISTDIR)/
 
 
@@ -349,8 +357,7 @@ compiler_rcc_make_all: qrc_finder.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_finder.cpp
 qrc_finder.cpp: ../Bulk/finder.qrc \
-		/usr/lib/qt5/bin/rcc \
-		../Bulk/input.txt
+		/usr/lib/qt5/bin/rcc
 	/usr/lib/qt5/bin/rcc -name finder ../Bulk/finder.qrc -o qrc_finder.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -389,9 +396,15 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 main.o: ../Bulk/main.cpp ../Bulk/mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Bulk/main.cpp
 
+member.o: ../Bulk/member.cpp ../Bulk/member.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o member.o ../Bulk/member.cpp
+
 mainwindow.o: ../Bulk/mainwindow.cpp ../Bulk/mainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Bulk/mainwindow.cpp
+
+member.o: ../Bulk/member.cpp ../Bulk/member.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o member.o ../Bulk/member.cpp
 
 qrc_finder.o: qrc_finder.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_finder.o qrc_finder.cpp
