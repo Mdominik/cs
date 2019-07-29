@@ -72,16 +72,33 @@ public:
     }
 
     node_deq<T>* pop_back() {
-        node_deq<T>* node = nullptr;
+        if(size==1) {
+            std::cout << "Popped the last one!" << std::endl;
+            back=nullptr;
+            front=nullptr;
+            size--;
+            return nullptr;
+        }
+        if(size==0) {
+            std::cout << "Nothing to pop!" << std::endl;
+            return nullptr;
+        }
+        node_deq<T>* node = back;
+        back->prev->next = nullptr;
+        back = back->prev;
         size--;
         return node;
     }
 
     void printAll() {
-        node_deq<T>* tmp=front;
-        for(int i =0; i<size; i++) {
-            tmp->toString();
-            tmp = tmp->next;
+        if(size>0) {
+            node_deq<T> *tmp=front;
+            for(int i =0; i<size; i++) {
+                tmp->toString();
+                tmp = tmp->next;
+            }
+        } else {
+            std::cout << "No elements in the deque" << std::endl;
         }
     }
 };
@@ -91,7 +108,17 @@ int main() {
     deque<double> lista;
     lista.push_front(2.2343);
     lista.push_front(3.3);
-    lista.push_front(233.313);
+    lista.push_front(2.2343);
+    lista.push_front(3.3);
+    lista.push_front(2.2343);
+    lista.push_front(3.3);
+    lista.push_front(2.2343);
+    lista.push_front(3.3);
+    lista.push_front(2.2343);
+    lista.push_front(3.3);
+
+
+    std::cout << lista.back <<std::endl;
     lista.printAll();
     //int id = binarySearch(vec, 70);
 
